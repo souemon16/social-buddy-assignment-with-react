@@ -69,7 +69,7 @@ const PostDetails = () => {
     // GET user Comment 
     const [comments, getPostComments] = useState([]);
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
+        fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
             .then(res => res.json())
             .then(data => getPostComments(data))
     }, [])
